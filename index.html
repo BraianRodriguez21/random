@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Carta 🌠</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Courier New', Courier, monospace;
+      color: #fff;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-color: #000;
+      transition: background-image 1s ease-in-out;
+    }
+
+    .carta {
+      background-color: rgba(0, 0, 0, 0.75);
+      padding: 30px;
+      border-radius: 10px;
+      max-width: 600px;
+      font-size: 1.2em;
+      line-height: 1.8;
+      white-space: pre-wrap;
+      box-shadow: 0 0 20px rgba(255,255,255,0.2);
+    }
+
+
+    @media (max-width: 600px) {
+      .carta {
+        padding: 20px;
+        margin: 10px;
+        font-size: 1em;
+        max-width: 90%;
+      }
+
+      body {
+        align-items: flex-start;
+        padding-top: 40px;
+        height: auto;
+        min-height: 100vh;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="carta">
+    ¿Por qué te extraño sabiendo lo extraño que es?  
+    Solo quiero saber si realmente estás...  
+    No lo digo por mí, solo quiero verte brillar  
+    Como en esas noches en las que las estrellas brillaban  
+    Quiero saber que cantas con tu plenitud, con esa hermosa voz  
+    Añoro el pasado y el amor que una vez nos unió  
+    Cuestioné todo, solo por tratar de ayudar y verte bien  
+    Quería verte feliz, pero parece que solo te hice daño  
+    Buscando inmediatez, te hice pasarla mal  
+    Y ahora veo que no olvidas las cosas que hice y dije  
+    Si te vuelvo a ver con "En Las Noches" de fondo, se me caerían las lágrimas  
+    Hay algo que me marca eso, que me lleva a ti.
+  </div>
+
+  <script>
+    const fondos = [
+      'https://i.ibb.co/YFFJxCsY/collage.jpg',
+      'https://i.ibb.co/84MTNj8F/collage-1.jpg'
+    ];
+
+    let i = 0;
+
+    function cambiarFondo() {
+      document.body.style.backgroundImage = `url('${fondos[i]}')`;
+      i = (i + 1) % fondos.length;
+    }
+
+    cambiarFondo(); 
+    setInterval(cambiarFondo, 5000); 
+</script>
+</body>
+</html>
